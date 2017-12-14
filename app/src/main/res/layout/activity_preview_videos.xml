@@ -17,7 +17,7 @@
             android:layout_height="30dp"
             android:layout_gravity="top"
             android:orientation="horizontal"
-            android:background="@drawable/video_top">
+           >
 
             <!--android:alpha="0.3"-->
 
@@ -25,7 +25,6 @@
                 android:id="@+id/video_back"
                 android:layout_width="15dp"
                 android:layout_height="18dp"
-                android:background="@drawable/video_back"
                 android:layout_gravity="center"
                 android:layout_marginLeft="20dp"></ImageButton>
 
@@ -33,30 +32,23 @@
                 android:id="@+id/video_share"
                 android:layout_width="25dp"
                 android:layout_height="15dp"
-                android:background="@drawable/video_share"
                 android:layout_gravity="center"
                 android:layout_marginLeft="280dp"
-
                 />
 
         </LinearLayout>
-
-
-
-
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_gravity="bottom"
             android:orientation="horizontal"
-            android:background="@drawable/video_bottom">
+           >
 
             <ImageButton
                 android:id="@+id/video_start"
                 android:layout_width="18dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/video_start"
                 android:layout_gravity="center"
                 android:layout_marginLeft="20dp">
 
@@ -73,8 +65,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="20dp"
-                android:progressDrawable="@drawable/seekbar_style"
-                android:thumb="@drawable/seekbar_thumb"
                 android:maxHeight="8dp"
                 android:minHeight="8dp"
 
@@ -84,7 +74,6 @@
                 android:id="@+id/video_pause"
                 android:layout_width="15dp"
                 android:layout_height="18dp"
-                android:background="@drawable/video_pause"
                 android:layout_gravity="center"
                 android:layout_marginLeft="20dp"
                 />
