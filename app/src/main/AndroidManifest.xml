@@ -28,7 +28,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".PhotoOrAlbum" />
-        <activity android:name=".PreviewVideos"></activity>
+        <activity android:name=".PreviewVideos" />
+        <activity android:name=".Sudoku"></activity>
     </application>
 
 </manifest>

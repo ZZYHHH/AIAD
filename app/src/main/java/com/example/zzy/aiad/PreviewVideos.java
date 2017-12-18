@@ -1,6 +1,7 @@
 package com.example.zzy.aiad;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
@@ -10,6 +11,7 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
 
@@ -18,10 +20,9 @@ public class PreviewVideos extends Activity implements OnClickListener {
     private SurfaceView surfaceview;
     private MediaPlayer mediaPlayer;
     private ImageButton start;
-    private ImageButton share;
-    private ImageButton back;
     private ImageButton pause;
     private SeekBar seekBar;
+    private Button next;
     private boolean isPlaying;
     private int currentPosition = 0;
 
@@ -35,15 +36,22 @@ public class PreviewVideos extends Activity implements OnClickListener {
         setContentView(R.layout.activity_preview_videos);
         findViewById();
         initView();
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(PreviewVideos.this,Sudoku.class);
+                startActivity(intent);
+            }
+        });
     }
 
     protected void findViewById() {
         // TODO Auto-generated method stub
         surfaceview = (SurfaceView) findViewById(R.id.surfaceView);
         start = (ImageButton) findViewById(R.id.video_start);
-        back = (ImageButton) findViewById(R.id.video_back);
         pause = (ImageButton) findViewById(R.id.video_pause);
-        share = (ImageButton) findViewById(R.id.video_share);
+        next=findViewById(R.id.next);
         seekBar = (SeekBar) findViewById(R.id.seekBar);
 
 
@@ -56,9 +64,7 @@ public class PreviewVideos extends Activity implements OnClickListener {
         surfaceview.getHolder().setKeepScreenOn(true);
         surfaceview.getHolder().addCallback(new SurfaceViewLis());
         start.setOnClickListener(this);
-        back.setOnClickListener(this);
         pause.setOnClickListener(this);
-        share.setOnClickListener(this);
         seekBar.setOnClickListener(this);
     }
 
