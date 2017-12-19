@@ -63,7 +63,7 @@ public class PhotoOrAlbum extends AppCompatActivity {
         mNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(PhotoOrAlbum.this,PreviewVideos.class);
+                Intent intent=new Intent(PhotoOrAlbum.this,Sudoku.class);
                 startActivity(intent);
             }
         });

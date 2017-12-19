@@ -192,15 +192,15 @@ public class PreviewVideos extends Activity implements OnClickListener {
     }
 
 
-    /**
-     * 暂停或继续
-     */
     protected void pause() {
         if (mediaPlayer != null && mediaPlayer.isPlaying()) {
             mediaPlayer.pause();
         }
 
     }
+    /**
+     * 暂停或继续
+     */
 
 
 
